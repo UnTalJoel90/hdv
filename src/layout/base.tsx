@@ -1,10 +1,10 @@
-import { navigate } from 'gatsby';
+// import { navigate } from 'gatsby';
 import React, { FC, ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import Footer from '../components/Footer';
-import NaBar from '../components/NavBar';
-import { NavBarMenuLinksProps, useNavBarMenuLinks } from '../hooks/useNavBarMenuLinks';
+// import NaBar from '../components/NavBar';
+// import { NavBarMenuLinksProps, useNavBarMenuLinks } from '../hooks/useNavBarMenuLinks';
 import { GlobalStyle, theme } from '../theme';
 
 export interface Props {
@@ -12,13 +12,13 @@ export interface Props {
 }
 
 export const Base: FC<Props> = ({ children }) => {
-  const menuList: NavBarMenuLinksProps[] = useNavBarMenuLinks();
-  const goNavigation = (url: string) => navigate(url);
+  // const menuList: NavBarMenuLinksProps[] = useNavBarMenuLinks();
+  // const goNavigation = (url: string) => navigate(url);
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <NaBar menuList={menuList} goNavigation={goNavigation} />
+      {/* <NaBar menuList={menuList} goNavigation={goNavigation} /> */}
       {children}
       <Footer />
     </ThemeProvider>

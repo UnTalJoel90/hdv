@@ -2,12 +2,14 @@ import React, { FC, Fragment, useMemo } from 'react';
 
 import { Box, Boxes } from '../components/Boxes';
 import {
+  Container,
   BackgroundColor,
   UserInformationContainer,
   DescriptionContainer,
   CleanDiv,
   Description,
   ContactInfoContainer,
+  ContactData,
   WorkExperienceContainer,
   WorkExperienceBackground,
   FooterframeContainer,
@@ -15,7 +17,6 @@ import {
   FooterPageLine,
 } from '../components/Home';
 import { ContainerPicture, Picture } from '../components/Picture';
-import { ResponsiveContainer } from '../components/ResponsiveContainer';
 import { Space } from '../components/Space';
 import {
   BigTitle,
@@ -54,7 +55,7 @@ const IndexPage: FC = () => {
   return (
     <Base>
       <BackgroundColor>
-        <ResponsiveContainer withOutpadding bg>
+        <Container withOutpadding bg>
           <UserInformationContainer>
             <DescriptionContainer>
               <CleanDiv />
@@ -73,20 +74,19 @@ const IndexPage: FC = () => {
                 <Picture src={foto.url} width={foto.width} height={foto.height} alt={nombre} />
               </ContainerPicture>
               <Space space="24px" />
-              <div>
+              <ContactData>
                 <MainParagraph color="white">DATOS DE CONTACTO</MainParagraph>
                 <Space space="17px" />
                 {contactInformation.map(({ titulo, link }, i) => {
+                  const info = titulo.trim() ? `${titulo}: ${link}` : link;
                   return (
                     <Fragment key={`${titulo}-${link}-${i}`}>
-                      <SmallText color="white">
-                        {titulo}: {link}
-                      </SmallText>
+                      <SmallText color="white">{info}</SmallText>
                       <Space space="5px" />
                     </Fragment>
                   );
                 })}
-              </div>
+              </ContactData>
             </ContactInfoContainer>
             <CleanDiv />
           </UserInformationContainer>
@@ -157,7 +157,7 @@ const IndexPage: FC = () => {
           </FooterframeContainer>
           <Space space="20px" />
           <FooterPageLine />
-        </ResponsiveContainer>
+        </Container>
       </BackgroundColor>
     </Base>
   );

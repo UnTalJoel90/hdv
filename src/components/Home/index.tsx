@@ -1,5 +1,17 @@
 import styled, { css } from 'styled-components';
 
+import { ResponsiveContainer } from '../ResponsiveContainer';
+
+export const Container = styled(ResponsiveContainer)`
+  ${({ theme: { breakpoints } }) => css`
+    max-width: 375px;
+
+    ${breakpoints.md} {
+      max-width: 1024px;
+    }
+  `}
+`;
+
 export const BackgroundColor = styled.div`
   ${({ theme: { colors } }) => css`
     background-color: ${colors.grayDark};
@@ -19,13 +31,15 @@ export const UserInformationContainer = styled.div`
 export const ContactInfoContainer = styled.div`
   ${({ theme: { breakpoints, colors } }) => css`
     background-color: ${colors.greenHeaven};
-    padding: 30px;
+    padding: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
     ${breakpoints.md} {
+      flex-direction: column;
+      padding: 30px;
       max-width: 300px;
       width: 100%;
       height: 420px;
@@ -36,10 +50,20 @@ export const ContactInfoContainer = styled.div`
   `}
 `;
 
+export const ContactData = styled.div`
+  ${({ theme: { breakpoints } }) => css`
+    width: 100%;
+
+    ${breakpoints.md} {
+      width: auto;
+    }
+  `}
+`;
+
 export const DescriptionContainer = styled.div`
   ${({ theme: { breakpoints, colors } }) => css`
     background-color: ${colors.graylight};
-    padding: 30px;
+    padding: 15px;
 
     ${breakpoints.md} {
       display: flex;
@@ -77,9 +101,9 @@ export const Description = styled.div`
 
 export const WorkExperienceContainer = styled.div`
   ${({ theme: { breakpoints } }) => css`
-    padding: 0 10px;
+    padding: 0 15px;
     ${breakpoints.md} {
-      width: 700px;
+      width: 710px;
       margin: auto;
       padding: 0;
     }
