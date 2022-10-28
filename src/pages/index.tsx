@@ -97,21 +97,17 @@ const IndexPage: FC = () => {
             </WorkExperienceBackground>
             <Space space="30px" />
             <Boxes>
-              {workExperience.map(
-                ({ nombreDeLaEmpresa, tiempoTrascurrido, cargo, descripcion }, i) => {
-                  return (
-                    <Box key={`${nombreDeLaEmpresa}-${i}`}>
-                      <ExtraSubtitulo>{cargo}</ExtraSubtitulo>
-                      <Space space="12px" />
-                      <MainParagraph fontWeight="600">
-                        {nombreDeLaEmpresa} | {tiempoTrascurrido}
-                      </MainParagraph>
-                      <Space space="10px" />
-                      <Paragraphs>• {descripcion.descripcion}</Paragraphs>
-                    </Box>
-                  );
-                },
-              )}
+              {workExperience.map(({ nombreDeLaEmpresa, cargo, descripcion }, i) => {
+                return (
+                  <Box key={`${nombreDeLaEmpresa}-${i}`}>
+                    <ExtraSubtitulo>{cargo}</ExtraSubtitulo>
+                    <Space space="12px" />
+                    <MainParagraph fontWeight="600">{nombreDeLaEmpresa}</MainParagraph>
+                    <Space space="10px" />
+                    <Paragraphs>• {descripcion.descripcion}</Paragraphs>
+                  </Box>
+                );
+              })}
             </Boxes>
             <Space space="40px" />
             <ExtraSubtitulo color="greenDark" fontWeight="600">

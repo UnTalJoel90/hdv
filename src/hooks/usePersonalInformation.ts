@@ -13,8 +13,6 @@ interface PictureProps {
 
 interface WorkExperienceProps {
   nombreDeLaEmpresa: string;
-  tiempoTrascurrido: string;
-  labores: string[];
   cargo: string;
   descripcion: {
     descripcion: string;
@@ -65,11 +63,9 @@ export const usePersonalInformation = (): PersonalInformationProps => {
           link
         }
       }
-      allContentfulExperienciaLaboral {
+      allContentfulExperienciaLaboral(sort: { order: ASC, fields: ordenar }) {
         nodes {
           nombreDeLaEmpresa
-          tiempoTrascurrido
-          labores
           cargo
           descripcion {
             descripcion
