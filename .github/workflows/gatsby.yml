@@ -38,8 +38,8 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         env:
-          GATSBY_SPACE_ID: ${{ secrets.GATSBY_SPACE_ID }}
-          GATSBY_ACCESS_TOKEN: ${{ secrets.GATSBY_ACCESS_TOKEN }}
+          spaceId: ${{ secrets.GATSBY_SPACE_ID }}
+          accessToken: ${{ secrets.GATSBY_ACCESS_TOKEN }}
         run: |
           if [ -f "${{ github.workspace }}/yarn.lock" ]; then
             echo "::set-output name=manager::yarn"
