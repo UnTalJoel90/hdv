@@ -36,7 +36,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup env
-        uses: actions/gatsby-github-action@v7
         with:
           spaceId: ${{ secrets.GATSBY_SPACE_ID }}
           accessToken: ${{ secrets.GATSBY_ACCESS_TOKEN }}
