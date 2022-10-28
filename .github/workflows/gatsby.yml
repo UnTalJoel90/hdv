@@ -31,13 +31,17 @@ defaults:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
+    runs-on: windows-latest
+    env: 
+        GATSBY_SPACE_ID: ${{ secrets.GATSBY_SPACE_ID }}
+        GATSBY_ACCESS_TOKEN: ${{ secrets.GATSBY_ACCESS_TOKEN }}
     steps:
-      - name: create env file
-        run: |
-          touch .env
-          echo GATSBY_SPACE_ID=${{ secrets.GATSBY_SPACE_ID }} >> .env
-          echo GATSBY_ACCESS_TOKEN=${{ secrets.GATSBY_ACCESS_TOKEN }} >> .env
+      # - name: create env file
+      #   run: |
+      #     touch .env
+      #     echo GATSBY_SPACE_ID=${{ secrets.GATSBY_SPACE_ID }} >> .env
+      #     echo GATSBY_ACCESS_TOKEN=${{ secrets.GATSBY_ACCESS_TOKEN }} >> .env
       - name: Checkout
         uses: actions/checkout@v3
       - name: Detect package manager
