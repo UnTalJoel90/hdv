@@ -1,5 +1,5 @@
 // import { navigate } from 'gatsby';
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import Footer from '../components/Footer';
@@ -14,6 +14,26 @@ export interface Props {
 export const Base: FC<Props> = ({ children }) => {
   // const menuList: NavBarMenuLinksProps[] = useNavBarMenuLinks();
   // const goNavigation = (url: string) => navigate(url);
+
+  const disabledRightClick = (e: any) => {
+    e.preventDefault();
+  };
+
+  useEffect(() => {
+    window.addEventListener('mousemove', () => {
+      // eslint-disable-next-line no-debugger
+      debugger;
+    });
+    window.addEventListener('contextmenu', disabledRightClick);
+
+    return () => {
+      window.removeEventListener('contextmenu', disabledRightClick);
+      window.removeEventListener('mousemove', () => {
+        // eslint-disable-next-line no-debugger
+        debugger;
+      });
+    };
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
