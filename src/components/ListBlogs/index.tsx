@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 
 import { Box, Boxes } from '../Boxes';
 import BlogCard, { BlogCardProps } from '../CardBlog';
@@ -8,7 +8,7 @@ interface ListBlogsProps {
   goNavigation: (url: string) => void;
 }
 
-export const ListBlogs: FC<ListBlogsProps> = ({ blogs, goNavigation }) => {
+export const ListBlogs: FC<ListBlogsProps> = memo(({ blogs, goNavigation }) => {
   return (
     <Boxes>
       {blogs.map((b) => {
@@ -21,4 +21,4 @@ export const ListBlogs: FC<ListBlogsProps> = ({ blogs, goNavigation }) => {
       })}
     </Boxes>
   );
-};
+});

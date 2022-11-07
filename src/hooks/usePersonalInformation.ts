@@ -19,6 +19,13 @@ interface WorkExperienceProps {
   };
 }
 
+interface RefProps {
+  cargo: string;
+  empresa: string;
+  telefono: string;
+  nombreDeLaPersona: string;
+}
+
 export interface PersonalInformationProps {
   foto: PictureProps;
   nombre: string;
@@ -29,6 +36,7 @@ export interface PersonalInformationProps {
   otrosConocimientos: string;
   contactInformation: ContactInformationProps[];
   workExperience: WorkExperienceProps[];
+  ref: RefProps[];
 }
 
 export const usePersonalInformation = (): PersonalInformationProps => {
@@ -36,6 +44,7 @@ export const usePersonalInformation = (): PersonalInformationProps => {
     contentfulDatosPersonales,
     allContentfulDatosDeContacto,
     allContentfulExperienciaLaboral,
+    allContentfulReferencias,
   } = useStaticQuery(graphql`
     query PersonalInformation {
       contentfulDatosPersonales {
@@ -72,6 +81,14 @@ export const usePersonalInformation = (): PersonalInformationProps => {
           }
         }
       }
+      allContentfulReferencias {
+        nodes {
+          cargo
+          empresa
+          telefono
+          nombreDeLaPersona
+        }
+      }
     }
   `);
 
@@ -87,6 +104,7 @@ export const usePersonalInformation = (): PersonalInformationProps => {
 
   const contactInformation = allContentfulDatosDeContacto.nodes;
   const workExperience = allContentfulExperienciaLaboral.nodes;
+  const ref = allContentfulReferencias.nodes;
 
   return {
     foto: {
@@ -102,5 +120,6 @@ export const usePersonalInformation = (): PersonalInformationProps => {
     otrosConocimientos,
     contactInformation,
     workExperience,
+    ref,
   };
 };

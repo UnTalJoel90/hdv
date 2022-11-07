@@ -1,4 +1,4 @@
-import React, { FC, Fragment, useMemo } from 'react';
+import React, { FC, useMemo } from 'react';
 
 import { Box, Boxes } from '../components/Boxes';
 import {
@@ -12,9 +12,10 @@ import {
   ContactData,
   WorkExperienceContainer,
   WorkExperienceBackground,
-  FooterframeContainer,
-  Footerframe,
+  FooterFrameContainer,
+  FooterFrame,
   FooterPageLine,
+  SelectItems,
 } from '../components/Home';
 import { ContainerPicture, Picture } from '../components/Picture';
 import { Space } from '../components/Space';
@@ -40,6 +41,7 @@ const IndexPage: FC = () => {
     otrosConocimientos,
     contactInformation,
     workExperience,
+    ref,
   }: PersonalInformationProps = usePersonalInformation();
 
   const dom = typeof window != 'undefined';
@@ -78,12 +80,11 @@ const IndexPage: FC = () => {
                 <MainParagraph color="white">DATOS DE CONTACTO</MainParagraph>
                 <Space space="17px" />
                 {contactInformation.map(({ titulo, link }, i) => {
-                  const info = titulo.trim() ? `${titulo}: ${link}` : link;
                   return (
-                    <Fragment key={`${titulo}-${link}-${i}`}>
-                      <SmallText color="white">{info}</SmallText>
+                    <SelectItems key={`${titulo}-${link}-${i}`}>
+                      <SmallText color="white">{link}</SmallText>
                       <Space space="5px" />
-                    </Fragment>
+                    </SelectItems>
                   );
                 })}
               </ContactData>
@@ -148,13 +149,42 @@ const IndexPage: FC = () => {
             </ExtraSubtitulo>
             <Space space="12px" />
             <MainParagraph>{otrosConocimientos}</MainParagraph>
+            <Space space="40px" />
+            <ExtraSubtitulo color="greenDark" fontWeight="600">
+              Referencias
+            </ExtraSubtitulo>
+            <Space space="12px" />
+            <Boxes>
+              {ref.map(({ nombreDeLaPersona, telefono, cargo, empresa }, i) => {
+                return (
+                  <Box key={`${telefono}-${i}`}>
+                    <Paragraphs>
+                      <strong>Nombre de la persona:</strong> {nombreDeLaPersona}
+                    </Paragraphs>
+                    <Space space="10px" />
+                    <Paragraphs>
+                      <strong>Empresa:</strong> {empresa}
+                    </Paragraphs>
+                    <Space space="10px" />
+                    <Paragraphs>
+                      <strong>Cargo:</strong> {cargo}
+                    </Paragraphs>
+                    <Space space="10px" />
+                    <Paragraphs>
+                      <strong>Teléfono:</strong> {telefono}
+                    </Paragraphs>
+                    <Space space="10px" />
+                  </Box>
+                );
+              })}
+            </Boxes>
           </WorkExperienceContainer>
           <Space space="100px" />
-          <FooterframeContainer>
-            {newArray.map(() => {
-              return <Footerframe />;
-            })}
-          </FooterframeContainer>
+          <FooterFrameContainer>
+            {newArray.map(() => (
+              <FooterFrame />
+            ))}
+          </FooterFrameContainer>
           <Space space="20px" />
           <FooterPageLine />
         </Container>

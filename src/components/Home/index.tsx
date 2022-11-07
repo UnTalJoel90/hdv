@@ -125,14 +125,14 @@ export const WorkExperienceBackground = styled.div`
   `}
 `;
 
-export const FooterframeContainer = styled.div`
+export const FooterFrameContainer = styled.div`
   ${() => css`
     display: flex;
     flex-direction: row;
   `}
 `;
 
-export const Footerframe = styled.div`
+export const FooterFrame = styled.div`
   ${({ theme: { colors } }) => css`
     background-color: ${colors.greenDark};
     height: 3px;
@@ -150,4 +150,14 @@ export const FooterPageLine = styled.div`
     height: 20px;
     width: 60%;
   `}
+`;
+
+export const SelectItems = styled.div`
+  * {
+    -webkit-user-select: auto;
+    -webkit-touch-callout: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+  }
 `;

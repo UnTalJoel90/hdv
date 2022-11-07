@@ -24,18 +24,17 @@ export const colors: ColorsList = {
 };
 
 const fontSizes = [
-  '66px',
-  '56px',
-  '46px',
-  '36px',
-  '30px',
-  '24px',
-  '20px',
-  '16px',
-  '14px',
-  '13px',
   '12px',
-  '11px',
+  '14px',
+  '15px',
+  '16px',
+  '20px',
+  '24px',
+  '30px',
+  '36px',
+  '46px',
+  '56px',
+  '66px',
 ];
 
 const size = {
@@ -75,29 +74,41 @@ export const GlobalStyle = createGlobalStyle<{
   }
 
   ${({ theme: { breakpoints, fontSizes } }) => css`
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
     h1 {
       line-height: 1;
-      font-size: ${fontSizes[3]};
+      font-size: ${fontSizes[7]};
       ${breakpoints.md} {
-        font-size: ${fontSizes[2]};
+        font-size: ${fontSizes[8]};
       }
     }
     h2 {
       font-size: ${fontSizes[5]};
       ${breakpoints.md} {
-        font-size: ${fontSizes[4]};
+        font-size: ${fontSizes[6]};
       }
     }
     h3 {
-      font-size: ${fontSizes[6]};
+      font-size: ${fontSizes[4]};
       ${breakpoints.md} {
         font-size: ${fontSizes[5]};
       }
     }
     h4 {
-      font-size: ${fontSizes[7]};
+      font-size: ${fontSizes[3]};
       ${breakpoints.md} {
-        font-size: ${fontSizes[6]};
+        font-size: ${fontSizes[4]};
       }
     }
   `}
