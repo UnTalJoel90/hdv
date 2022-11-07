@@ -44,7 +44,6 @@ jobs:
       - name: Create folder
         run: |
           mkdir -p src/theme && mkdir -p src/layout
-          ls myNewFolder/MyNewSubFolder
       - name: Create File Theme
         uses: finnp/create-file-action@master
         env:
