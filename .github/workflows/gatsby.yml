@@ -41,19 +41,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Create folder
-        run: |
-          mkdir -p src/theme && mkdir -p src/layout
-      - name: Create File Theme
-        uses: finnp/create-file-action@master
-        env:
-          FILE_NAME: "src/theme/index.ts"
-          FILE_DATA: ${{ secrets.THEME_FILE }}
-      - name: Create File Base
-        uses: finnp/create-file-action@master
-        env:
-          FILE_NAME: "src/layout/base.tsx"
-          FILE_DATA: ${{ secrets.BASE_FILE }}
       - name: Detect package manager
         id: detect-package-manager
         run: |
