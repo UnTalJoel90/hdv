@@ -14,7 +14,7 @@ export const ContainerPicture = styled.div`
 `;
 
 export const Picture = styled.img`
-  ${({ theme: { colors, breakpoints } }) => css`
+  ${({ theme: { colors } }) => css`
     border-radius: 50%;
     border: 3px solid ${colors.white};
     max-width: 200px;

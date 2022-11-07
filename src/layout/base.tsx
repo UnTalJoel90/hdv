@@ -25,7 +25,6 @@ export const Base: FC<BaseProps> = ({ children }) => {
         debugger;
       });
       window.addEventListener('contextmenu', disabledRightClick);
-
       return () => {
         window.removeEventListener('contextmenu', disabledRightClick);
         window.removeEventListener('mousemove', () => {

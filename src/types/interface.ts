@@ -53,6 +53,7 @@ export interface SpaceProps {
 
 export interface FontProps {
   fontWeight?: string;
+  textAlign?: string;
 }
 
 export interface BaseProps {

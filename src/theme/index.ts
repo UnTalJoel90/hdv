@@ -62,6 +62,8 @@ export const GlobalStyle = createGlobalStyle<{
       text-decoration: none;
       letter-spacing: 0.03em;
       list-style-type: none;
+      font-family: 'Source Sans Pro';
+      font-style: normal;
     }
 
     h1,
@@ -77,7 +79,6 @@ export const GlobalStyle = createGlobalStyle<{
     }
 
     h1 {
-      line-height: 1;
       font-size: ${fontSizes[7]};
       ${breakpoints.md} {
         font-size: ${fontSizes[8]};

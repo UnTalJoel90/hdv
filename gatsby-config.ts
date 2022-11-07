@@ -33,6 +33,13 @@ const config: GatsbyConfig = {
         accessToken: process.env.GATSBY_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: ['Source Sans Pro', 'source sans pro:200,300,400,600,700,900'],
+        display: 'swap',
+      },
+    },
   ],
 };
 

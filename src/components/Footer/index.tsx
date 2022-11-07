@@ -22,14 +22,18 @@ const Container = styled.div`
 `;
 
 const CopyContainer = styled(SmallText)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  ${() => css`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  `}
 `;
 
 const Copy = styled.div`
-  margin-right: 5px;
-  font-size: 9px;
+  ${() => css`
+    font-size: 9px;
+    margin-right: 5px;
+  `}
 `;
 
 const Footer: FC = memo(() => {

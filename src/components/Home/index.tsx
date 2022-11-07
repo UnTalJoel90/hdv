@@ -153,11 +153,13 @@ export const FooterPageLine = styled.div`
 `;
 
 export const SelectItems = styled.div`
-  * {
-    -webkit-user-select: auto;
-    -webkit-touch-callout: auto;
-    -moz-user-select: auto;
-    -ms-user-select: auto;
-    user-select: auto;
-  }
+  ${() => css`
+    * {
+      -webkit-user-select: auto;
+      -webkit-touch-callout: auto;
+      -moz-user-select: auto;
+      -ms-user-select: auto;
+      user-select: auto;
+    }
+  `}
 `;

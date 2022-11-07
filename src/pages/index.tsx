@@ -68,8 +68,8 @@ const IndexPage: FC = () => {
                 </BigTitle>
                 <Space space="20px" />
                 <ExtraSubtitulo>{cargo.toUpperCase()}</ExtraSubtitulo>
-                <Space space="25px" />
-                <MainParagraph>{resumen}</MainParagraph>
+                <Space space="15px" />
+                <MainParagraph textAlign="justify">{resumen}</MainParagraph>
               </Description>
             </DescriptionContainer>
             <ContactInfoContainer>
@@ -106,7 +106,7 @@ const IndexPage: FC = () => {
                     <Space space="12px" />
                     <MainParagraph fontWeight="600">{nombreDeLaEmpresa}</MainParagraph>
                     <Space space="10px" />
-                    <Paragraphs>• {descripcion.descripcion}</Paragraphs>
+                    <Paragraphs textAlign="justify">{descripcion.descripcion}</Paragraphs>
                   </Box>
                 );
               })}
@@ -149,7 +149,7 @@ const IndexPage: FC = () => {
               OTROS CONOCIMIENTOS
             </ExtraSubtitulo>
             <Space space="12px" />
-            <MainParagraph>{otrosConocimientos}</MainParagraph>
+            <MainParagraph textAlign="justify">{otrosConocimientos}</MainParagraph>
             <Space space="40px" />
             <ExtraSubtitulo color="greenDark" fontWeight="600">
               Referencias
