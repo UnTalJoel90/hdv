@@ -27,8 +27,9 @@ import {
   SubTitle,
   Paragraphs,
 } from '../components/Typography';
-import { usePersonalInformation, PersonalInformationProps } from '../hooks';
+import { usePersonalInformation } from '../hooks';
 import { Base } from '../layout/base';
+import type { PersonalInformationProps } from '../types/interface';
 
 const IndexPage: FC = () => {
   const {
