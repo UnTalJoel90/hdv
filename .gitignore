@@ -4,3 +4,6 @@ public
 .env
 .DS_Store
 **/.DS_Store
+
+src/theme/*
+src/layout/*

@@ -1,43 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-interface ContactInformationProps {
-  titulo: string;
-  link: string;
-}
-
-interface PictureProps {
-  url: string;
-  height: number;
-  width: number;
-}
-
-interface WorkExperienceProps {
-  nombreDeLaEmpresa: string;
-  cargo: string;
-  descripcion: {
-    descripcion: string;
-  };
-}
-
-interface RefProps {
-  cargo: string;
-  empresa: string;
-  telefono: string;
-  nombreDeLaPersona: string;
-}
-
-export interface PersonalInformationProps {
-  foto: PictureProps;
-  nombre: string;
-  cargo: string;
-  habilidades: string[];
-  idiomas: string[];
-  resumen: string;
-  otrosConocimientos: string;
-  contactInformation: ContactInformationProps[];
-  workExperience: WorkExperienceProps[];
-  ref: RefProps[];
-}
+import { PersonalInformationProps } from '.';
 
 export const usePersonalInformation = (): PersonalInformationProps => {
   const {

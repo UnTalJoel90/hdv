@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 
-interface SpaceProps {
-  space: string;
-}
+import type { SpaceProps } from '../../types/interface';
 
 export const Space = styled.div<SpaceProps>`
   ${({ space }) => css`

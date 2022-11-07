@@ -1,15 +1,10 @@
 import React, { Fragment, FC, memo } from 'react';
 import styled, { css } from 'styled-components';
 
-import { NavBarMenuLinksProps } from '../../hooks/useNavBarMenuLinks';
+import type { NavBarProps } from '../../types/interface';
 import { Line } from '../Line';
 import { ResponsiveContainer } from '../ResponsiveContainer';
 import { ExtraSubtitulo } from '../Typography';
-
-interface NavBarProps {
-  menuList: NavBarMenuLinksProps[];
-  goNavigation: (url: string) => void;
-}
 
 const BackgroundColor = styled.div`
   ${({ theme: { colors } }) => css`

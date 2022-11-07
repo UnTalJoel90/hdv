@@ -1,9 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-export interface NavBarMenuLinksProps {
-  link: string;
-  name: string;
-}
+import type { NavBarMenuLinksProps } from '../types/interface';
 
 export const useNavBarMenuLinks = (): NavBarMenuLinksProps[] => {
   const { site } = useStaticQuery(graphql`

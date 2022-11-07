@@ -1,12 +1,8 @@
 import React, { FC, memo } from 'react';
 
+import type { ListBlogsProps } from '../../types/interface';
 import { Box, Boxes } from '../Boxes';
-import BlogCard, { BlogCardProps } from '../CardBlog';
-
-interface ListBlogsProps {
-  blogs: BlogCardProps[];
-  goNavigation: (url: string) => void;
-}
+import BlogCard from '../CardBlog';
 
 export const ListBlogs: FC<ListBlogsProps> = memo(({ blogs, goNavigation }) => {
   return (

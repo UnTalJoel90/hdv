@@ -1,21 +1,11 @@
 import { graphql, navigate } from 'gatsby';
 import React, { FC } from 'react';
 
-import type { BlogCardProps } from '../../../components/CardBlog';
 import { ListBlogs } from '../../../components/ListBlogs';
 import { ResponsiveContainer } from '../../../components/ResponsiveContainer';
 import { Space } from '../../../components/Space';
 import { Base } from '../../../layout/base';
-
-interface ContentfulBlogTemplatesProps extends BlogCardProps {}
-
-interface BlogTemplatesProps {
-  data: {
-    contentfulBlogs: ContentfulBlogTemplatesProps;
-    next: BlogCardProps;
-    previous: BlogCardProps;
-  };
-}
+import type { BlogCardProps, BlogTemplatesProps } from '../../../types/interface';
 
 const BlogTemplates: FC<BlogTemplatesProps> = ({ data }) => {
   const { contentfulBlogs, next, previous } = data;

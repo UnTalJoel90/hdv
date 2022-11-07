@@ -1,12 +1,10 @@
 import styled, { css } from 'styled-components';
 
+import type { FontProps } from '../../types/interface';
+
 export const ContainerInfo = styled.div`
   margin: 0 30px;
 `;
-
-interface FontProps {
-  fontWeight?: string;
-}
 
 export const BigTitle = styled.h1<FontProps>`
   ${({ theme: { colors }, color, fontWeight }) => css`

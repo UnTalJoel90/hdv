@@ -2,21 +2,13 @@ import { graphql, navigate } from 'gatsby';
 import React, { FC } from 'react';
 
 import imgHero from '../../assets/img/hero_blog.jpg';
-import { type BlogCardProps } from '../../components/CardBlog';
 import { HeroContainer } from '../../components/Hero';
 import { ListBlogs } from '../../components/ListBlogs';
 import { ResponsiveContainer } from '../../components/ResponsiveContainer';
 import { Space } from '../../components/Space';
 import { BigTitle } from '../../components/Typography';
 import { Base } from '../../layout/base';
-
-interface BlogsContainerProps {
-  data: {
-    allContentfulBlogs: {
-      nodes: BlogCardProps[];
-    };
-  };
-}
+import type { BlogsContainerProps } from '../../types/interface';
 
 const Blogs: FC<BlogsContainerProps> = ({ data }) => {
   const blogs = data.allContentfulBlogs.nodes;

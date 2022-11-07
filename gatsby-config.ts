@@ -6,8 +6,10 @@ require('dotenv').config({
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: 'Hoja De Vida',
-    siteUrl: 'https://www.yourdomain.tld',
+    title: 'Hoja de vida',
+    description: '',
+    author: 'Joel Elicer Robinson Alvarez',
+    siteUrl: 'https://joelrobinson.co',
     menuLinks: [
       {
         name: 'Inicia',

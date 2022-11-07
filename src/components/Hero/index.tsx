@@ -1,9 +1,6 @@
 import styled, { css } from 'styled-components';
 
-interface HeroContainerProps {
-  height?: number;
-  url?: string;
-}
+import type { HeroContainerProps } from '../../types/interface';
 
 export const HeroContainer = styled.div<HeroContainerProps>`
   ${({ theme: { colors }, color, height = 200, url }) => css`

@@ -1,31 +1,9 @@
 import React, { FC, memo } from 'react';
 import styled, { css } from 'styled-components';
 
+import type { BlogCardProps, HeadCardProps } from '../../types/interface';
 import { Space } from '../Space';
 import { MainParagraph, SmallText, Title } from '../Typography';
-
-interface HeadCardProps {
-  height: number;
-}
-
-interface ExtraProps {
-  goNavigation: (url: string) => void;
-}
-
-export interface BlogCardProps extends ExtraProps {
-  id: string;
-  titulo: string;
-  fechaDePublicacion: string;
-  tags: string[];
-  pieDePagina: string;
-  imagenPrincipal: {
-    url: string;
-    resize: {
-      height: number;
-      width: number;
-    };
-  };
-}
 
 const Container = styled.button`
   ${() => css`

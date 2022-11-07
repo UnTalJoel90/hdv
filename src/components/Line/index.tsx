@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 
-interface LineProps {
-  size?: string;
-}
+import type { LineProps } from '../../types/interface';
 
 export const Line = styled.hr<LineProps>`
   ${({ theme: { colors }, color, size = '4' }) => css`
