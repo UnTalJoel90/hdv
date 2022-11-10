@@ -156,9 +156,9 @@ const IndexPage: FC = () => {
             </ExtraSubtitulo>
             <Space space="12px" />
             <Boxes>
-              {ref.map(({ nombreDeLaPersona, telefono, cargo, empresa }, i) => {
+              {ref.map(({ nombreDeLaPersona, cargo, empresa }, i) => {
                 return (
-                  <Box key={`${telefono}-${i}`}>
+                  <Box key={`${nombreDeLaPersona}-${i}`}>
                     <Paragraphs>
                       <strong>Nombre de la persona:</strong> {nombreDeLaPersona}
                     </Paragraphs>
@@ -169,10 +169,6 @@ const IndexPage: FC = () => {
                     <Space space="10px" />
                     <Paragraphs>
                       <strong>Cargo:</strong> {cargo}
-                    </Paragraphs>
-                    <Space space="10px" />
-                    <Paragraphs>
-                      <strong>Teléfono:</strong> {telefono}
                     </Paragraphs>
                     <Space space="10px" />
                   </Box>

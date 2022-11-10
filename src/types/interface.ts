@@ -112,7 +112,6 @@ export interface WorkExperienceProps {
 export interface RefProps {
   cargo: string;
   empresa: string;
-  telefono: string;
   nombreDeLaPersona: string;
 }
 

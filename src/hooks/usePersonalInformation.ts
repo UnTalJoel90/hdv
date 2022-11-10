@@ -48,7 +48,6 @@ export const usePersonalInformation = (): PersonalInformationProps => {
         nodes {
           cargo
           empresa
-          telefono
           nombreDeLaPersona
         }
       }
