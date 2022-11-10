@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { ResponsiveContainer } from '../ResponsiveContainer';
+import { Paragraphs } from '../Typography';
 
 export const Container = styled(ResponsiveContainer)`
   ${({ theme: { breakpoints } }) => css`
@@ -152,14 +153,59 @@ export const FooterPageLine = styled.div`
   `}
 `;
 
-export const SelectItems = styled.div`
+export const CelBotton = styled.div<{ width?: string }>`
+  ${({ theme: { colors }, color = 'white', width = 'auto' }) => css`
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: ${colors[color]};
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    cursor: pointer;
+    width: ${width};
+  `}
+`;
+
+export const CloseBotton = styled.div<{ size?: string }>`
+  ${({ theme: { colors }, color = 'white', size = '20px' }) => css`
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: ${colors[color]};
+    cursor: pointer;
+    color: ${colors[color]};
+    padding: 0 6px 2px;
+    font-size: 13px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  `}
+`;
+
+export const RefBottonContainer = styled(Paragraphs)`
   ${() => css`
-    * {
-      -webkit-user-select: auto;
-      -webkit-touch-callout: auto;
-      -moz-user-select: auto;
-      -ms-user-select: auto;
-      user-select: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    strong {
+      margin-right: 5px;
     }
+  `}
+`;
+
+export const ModalHome = styled.div`
+  ${({ theme: { colors } }) => css`
+    background-color: ${colors.greenHeaven};
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
   `}
 `;

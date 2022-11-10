@@ -64,6 +64,7 @@ export const GlobalStyle = createGlobalStyle<{
       list-style-type: none;
       font-family: 'Source Sans Pro';
       font-style: normal;
+      position: relative;
     }
 
     h1,
