@@ -10,6 +10,7 @@ export const useNavBarMenuLinks = (): NavBarMenuLinksProps[] => {
           menuLinks {
             link
             name
+            extraMenu
           }
         }
       }

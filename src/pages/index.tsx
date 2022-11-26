@@ -27,7 +27,7 @@ import { Space } from '../components/Space';
 import {
   BigTitle,
   MainParagraph,
-  ExtraSubtitulo,
+  ExtraSubtitle,
   SmallText,
   SubTitle,
   Paragraphs,
@@ -75,7 +75,7 @@ const IndexPage: FC = () => {
                     {nombre}
                   </BigTitle>
                   <Space space="20px" />
-                  <ExtraSubtitulo>{cargo.toUpperCase()}</ExtraSubtitulo>
+                  <ExtraSubtitle>{cargo.toUpperCase()}</ExtraSubtitle>
                   <Space space="15px" />
                   <MainParagraph textAlign="justify">{resumen}</MainParagraph>
                 </Description>
@@ -117,7 +117,7 @@ const IndexPage: FC = () => {
                 {workExperience.map(({ nombreDeLaEmpresa, cargo, descripcion }, i) => {
                   return (
                     <Box key={`${nombreDeLaEmpresa}-${i}`}>
-                      <ExtraSubtitulo>{cargo}</ExtraSubtitulo>
+                      <ExtraSubtitle>{cargo}</ExtraSubtitle>
                       <Space space="12px" />
                       <MainParagraph fontWeight="600">{nombreDeLaEmpresa}</MainParagraph>
                       <Space space="10px" />
@@ -127,9 +127,9 @@ const IndexPage: FC = () => {
                 })}
               </Boxes>
               <Space space="40px" />
-              <ExtraSubtitulo color="greenDark" fontWeight="600">
+              <ExtraSubtitle color="greenDark" fontWeight="600">
                 HABILIDADES | IDIOMAS
-              </ExtraSubtitulo>
+              </ExtraSubtitle>
               <Space space="12px" />
               <Boxes>
                 <Box>
@@ -160,15 +160,15 @@ const IndexPage: FC = () => {
                 </Box>
               </Boxes>
               <Space space="30px" />
-              <ExtraSubtitulo color="greenDark" fontWeight="600">
+              <ExtraSubtitle color="greenDark" fontWeight="600">
                 OTROS CONOCIMIENTOS
-              </ExtraSubtitulo>
+              </ExtraSubtitle>
               <Space space="12px" />
               <MainParagraph textAlign="justify">{otrosConocimientos}</MainParagraph>
               <Space space="40px" />
-              <ExtraSubtitulo color="greenDark" fontWeight="600">
+              <ExtraSubtitle color="greenDark" fontWeight="600">
                 Referencias
-              </ExtraSubtitulo>
+              </ExtraSubtitle>
               <Space space="12px" />
               <Boxes gap="20px 0">
                 {ref.map(({ nombreDeLaPersona, cargo, empresa }, i) => {

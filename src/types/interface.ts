@@ -40,11 +40,21 @@ export interface ListBlogsProps {
 export interface NavBarMenuLinksProps {
   link: string;
   name: string;
+  extraMenu?: boolean;
 }
 
 export interface NavBarProps {
   menuList: NavBarMenuLinksProps[];
   goNavigation: (url: string) => void;
+}
+
+export interface NavBarDesktopProps extends NavBarProps {
+  checkExtraMenu: (link: string) => any[];
+}
+
+export interface MenuMobileProps extends NavBarProps, NavBarDesktopProps {
+  isOpenMenu: boolean;
+  setIsOpenMenu: (isOpenMenu: boolean) => void;
 }
 
 export interface SpaceProps {
@@ -126,4 +136,37 @@ export interface PersonalInformationProps {
   contactInformation: ContactInformationProps[];
   workExperience: WorkExperienceProps[];
   ref: RefProps[];
+}
+
+export interface UseProjectsProps {
+  projects: {
+    id: string;
+    title: string;
+  }[];
+}
+
+export interface ProjectTemplatesProps {
+  data: {
+    contentfulProjects: {
+      title: string;
+      videoAndroid: {
+        url: string;
+      };
+      videoIOs: {
+        url: string;
+      };
+      description: {
+        description: string;
+      };
+      cdigoQr: {
+        url: string;
+      };
+    };
+  };
+}
+
+export interface ModalProps {
+  closeModal: () => void;
+  modalIsOpen: boolean;
+  children?: ReactNode;
 }

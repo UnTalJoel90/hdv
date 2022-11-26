@@ -31,7 +31,7 @@ export const SubTitle = styled.h3<FontProps>`
   `}
 `;
 
-export const ExtraSubtitulo = styled.h4<FontProps>`
+export const ExtraSubtitle = styled.h4<FontProps>`
   ${({ theme: { colors }, color, fontWeight, textAlign = 'left' }) => css`
     color: ${colors[`${color}`]};
     text-align: ${textAlign};

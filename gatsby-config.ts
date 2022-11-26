@@ -15,9 +15,14 @@ const config: GatsbyConfig = {
         name: 'Inicia',
         link: '/',
       },
+      // {
+      //   name: 'Blog',
+      //   link: '/blog',
+      // },
       {
-        name: 'Blog',
-        link: '/blog',
+        name: 'Proyecto',
+        link: '/project',
+        extraMenu: true,
       },
     ],
   },

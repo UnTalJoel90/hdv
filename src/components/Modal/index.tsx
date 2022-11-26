@@ -1,16 +1,11 @@
-import React, { FC, memo, ReactNode } from 'react';
+import React, { FC, memo } from 'react';
 import styled, { css } from 'styled-components';
 
+import { ModalProps } from '../../types/interface';
 import { SelectItems } from '../SelectItems';
 
-export interface ModalProps {
-  closeModal: () => void;
-  modalIsOpen: boolean;
-  children?: ReactNode;
-}
-
 const Container = styled(SelectItems)`
-  ${({ theme: { breakpoints } }) => css`
+  ${() => css`
     position: fixed;
     background-color: #0010104d;
     width: 100%;

@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-import { PersonalInformationProps } from '.';
+import type { PersonalInformationProps } from '../types/interface';
 
 export const usePersonalInformation = (): PersonalInformationProps => {
   const {

@@ -22,3 +22,11 @@ export const Picture = styled.img`
     height: auto;
   `}
 `;
+
+export const Image = styled.img`
+  ${() => css`
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+  `}
+`;

@@ -11,6 +11,7 @@ const Container = styled.button`
     border: none;
     cursor: pointer;
     text-align: left;
+    width: 100%;
   `}
 `;
 
@@ -101,7 +102,7 @@ const BlogCard: FC<BlogCardProps> = memo(
     const date = new Date(fechaDePublicacion).toLocaleDateString();
 
     return (
-      <Container onClick={() => goNavigation(`/blogs/${id}`)}>
+      <Container onClick={() => goNavigation(`/blog/${id}`)}>
         <HeadCard height={height}>
           <BackgroundImg />
           <TitleCard color="graylight">{titulo}</TitleCard>
