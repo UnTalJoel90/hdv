@@ -23,10 +23,24 @@ export const Picture = styled.img`
   `}
 `;
 
-export const Image = styled.img`
-  ${() => css`
+export const Image = styled.img<{ height?: string }>`
+  ${({ height = 'auto' }) => css`
     max-width: 450px;
     width: 100%;
-    height: auto;
+    height: ${height};
+  `}
+`;
+
+export const ContainerVideos = styled.div`
+  ${({ theme: { breakpoints } }) => css`
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    ${breakpoints.md} {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
   `}
 `;

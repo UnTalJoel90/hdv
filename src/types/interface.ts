@@ -151,12 +151,17 @@ export interface ProjectTemplatesProps {
       title: string;
       videoAndroid: {
         url: string;
+        gatsbyImageData: any;
       };
       videoIOs: {
         url: string;
+        gatsbyImageData: any;
       };
       description: {
         description: string;
+        childMarkdownRemark: {
+          html: string;
+        };
       };
       cdigoQr: {
         url: string;
