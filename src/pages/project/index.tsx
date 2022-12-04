@@ -24,7 +24,7 @@ const ProjectTemplates: FC<ProjectTemplatesProps> = ({ data }) => {
         <Space space="30px" />
         <Title>{title}</Title>
         <Space space="20px" />
-        <Markdown dangerouslySetInnerHTML={{ __html: `<div>${descriptionHtml}</div>` }} />
+        <Markdown dangerouslySetInnerHTML={{ __html: descriptionHtml }} />
         <Space space="20px" />
         <SubTitle>QR</SubTitle>
         <Space space="10px" />
