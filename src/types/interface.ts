@@ -88,8 +88,22 @@ export interface BlogTemplatesProps {
   };
 }
 
-export interface ColorsList {
+export interface ObjetProps {
   [key: string]: string;
+}
+
+export interface ColorsList {
+  background: string;
+  greenHeaven: string;
+  greenDark: string;
+  grayDark: string;
+  grayMedium: string;
+  graylight: string;
+  white: string;
+  black: string;
+  status: {
+    warn: string;
+  };
 }
 
 export interface BreakpointProps {

@@ -11,6 +11,9 @@ export const colors: ColorsList = {
   graylight: '#ebebec',
   white: '#FFFFFF',
   black: '#000000',
+  status: {
+    warn: '#bdbd3f',
+  },
 };
 
 const fontSizes = [

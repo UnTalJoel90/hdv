@@ -38,14 +38,15 @@ const Items = styled.div`
   `}
 `;
 
-const Item = styled.button`
-  ${({ theme: { breakpoints } }) => css`
+const Item = styled.button<{ extraMargin: number }>`
+  ${({ theme: { breakpoints }, extraMargin }) => css`
     background-color: inherit;
     border: none;
     /* display: flex;
     flex-direction: column;
     align-items: center; */
-    margin: auto 20px auto 0; // Eliminar cuando se active el menu mobile
+    margin: auto 10px auto 0; // Eliminar cuando se active el menu mobile
+    margin-left: ${extraMargin}px;
 
     ${breakpoints.md} {
       /* display: block; */
@@ -65,6 +66,15 @@ const ExtraMenuBox = styled.div`
     background: ${colors.white};
     border: 1.5px solid ${colors.greenHeaven};
     border-radius: 5px;
+  `}
+`;
+
+const DividerMenu = styled.div`
+  ${({ theme: { colors } }) => css`
+    background-color: ${colors.grayDark};
+    height: 50%;
+    width: 2px;
+    margin: auto 0;
   `}
 `;
 
@@ -151,6 +161,7 @@ const MenuDesktop: FC<NavBarDesktopProps> = ({ menuList, goNavigation, checkExtr
         return (
           <Fragment key={`${name}-${i}`}>
             <Item
+              extraMargin={i === 0 ? 0 : 10}
               onClick={() => {
                 if (link && !extraMenu) goNavigation(link);
                 else if (extraMenu && array.length === 1) {
@@ -174,6 +185,7 @@ const MenuDesktop: FC<NavBarDesktopProps> = ({ menuList, goNavigation, checkExtr
                 </ExtraMenuBox>
               ) : null}
             </Item>
+            {i + 1 !== menuList.length && <DividerMenu />}
           </Fragment>
         );
       })}

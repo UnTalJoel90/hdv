@@ -12,7 +12,7 @@ const config: GatsbyConfig = {
     siteUrl: 'https://joelrobinson.co',
     menuLinks: [
       {
-        name: 'Inicia',
+        name: 'Inicio',
         link: '/',
       },
       // {

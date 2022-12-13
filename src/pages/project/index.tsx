@@ -1,11 +1,12 @@
 import { graphql } from 'gatsby';
 import React, { FC } from 'react';
 
+import { AlertBox } from '../../components/AlertBox';
 import { Markdown } from '../../components/Markdown';
 import { Image, ContainerVideos } from '../../components/Picture';
 import { ResponsiveContainer } from '../../components/ResponsiveContainer';
 import { Space } from '../../components/Space';
-import { ExtraSubtitle, SubTitle, Title } from '../../components/Typography';
+import { ExtraSubtitle, MainParagraph, SubTitle, Title } from '../../components/Typography';
 import { Base } from '../../layout/base';
 import { ProjectTemplatesProps } from '../../types/interface';
 
@@ -28,9 +29,17 @@ const ProjectTemplates: FC<ProjectTemplatesProps> = ({ data }) => {
         <Space space="20px" />
         <SubTitle>QR</SubTitle>
         <Space space="10px" />
+        <AlertBox>
+          <MainParagraph>
+            <b>IMPORTANTE:</b> Expo IOS no permite la lectura de QRS sin autorizacion (EXNetwork
+            error 403), por este motivo el siguiente codigo solo puede ser usado en dispositivos
+            Android.
+          </MainParagraph>
+        </AlertBox>
+        <Space space="20px" />
         <Image src={cdigoQr.url} alt="qr" />
         <Space space="20px" />
-        <SubTitle>Gifs de Ejemplo</SubTitle>
+        <SubTitle>Simuladores - Gifs de Ejemplo</SubTitle>
         <Space space="10px" />
         <ContainerVideos>
           <div>
