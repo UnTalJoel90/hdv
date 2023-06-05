@@ -45,12 +45,12 @@ const ProjectTemplates: FC<ProjectTemplatesProps> = ({ data }) => {
           <div>
             <ExtraSubtitle>IOs</ExtraSubtitle>
             <Space space="5px" />
-            <Image height="500px" src={videoIOs.url} alt="videoIOs" />
+            <Image height="500px" width='auto' src={videoIOs.url} alt="videoIOs" />
           </div>
           <div>
             <ExtraSubtitle>Android</ExtraSubtitle>
             <Space space="5px" />
-            <Image height="500px" src={videoAndroid.url} alt="videoAndroid" />
+            <Image height="500px" width='auto' src={videoAndroid.url} alt="videoAndroid" />
           </div>
         </ContainerVideos>
         <Space space="50px" />

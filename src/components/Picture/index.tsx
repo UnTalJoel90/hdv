@@ -23,10 +23,10 @@ export const Picture = styled.img`
   `}
 `;
 
-export const Image = styled.img<{ height?: string }>`
-  ${({ height = 'auto' }) => css`
+export const Image = styled.img<{ height?: string, width?: string }>`
+  ${({ height = 'auto', width = "100%" }) => css`
     max-width: 450px;
-    width: 100%;
+    width: ${width};
     height: ${height};
   `}
 `;

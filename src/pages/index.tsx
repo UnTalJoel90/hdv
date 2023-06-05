@@ -109,23 +109,11 @@ const IndexPage: FC = () => {
             </UserInformationContainer>
             <Space space="40px" />
             <WorkExperienceContainer>
-              <WorkExperienceBackground>
-                <SubTitle color="greenDark">EXPERIENCIA LABORAL</SubTitle>
-              </WorkExperienceBackground>
-              <Space space="30px" />
-              <Boxes>
-                {workExperience.map(({ nombreDeLaEmpresa, cargo, descripcion }, i) => {
-                  return (
-                    <Box key={`${nombreDeLaEmpresa}-${i}`}>
-                      <ExtraSubtitle>{cargo}</ExtraSubtitle>
-                      <Space space="12px" />
-                      <MainParagraph fontWeight="600">{nombreDeLaEmpresa}</MainParagraph>
-                      <Space space="10px" />
-                      <Paragraphs textAlign="justify">{descripcion.descripcion}</Paragraphs>
-                    </Box>
-                  );
-                })}
-              </Boxes>
+              <ExtraSubtitle color="greenDark" fontWeight="600">
+                CONOCIMIENTOS
+              </ExtraSubtitle>
+              <Space space="12px" />
+              <MainParagraph textAlign="justify">{otrosConocimientos}</MainParagraph>
               <Space space="40px" />
               <ExtraSubtitle color="greenDark" fontWeight="600">
                 HABILIDADES | IDIOMAS
@@ -159,13 +147,25 @@ const IndexPage: FC = () => {
                   </ul>
                 </Box>
               </Boxes>
-              <Space space="30px" />
-              <ExtraSubtitle color="greenDark" fontWeight="600">
-                OTROS CONOCIMIENTOS
-              </ExtraSubtitle>
-              <Space space="12px" />
-              <MainParagraph textAlign="justify">{otrosConocimientos}</MainParagraph>
               <Space space="40px" />
+              <WorkExperienceBackground>
+                <SubTitle color="greenDark">EXPERIENCIA LABORAL</SubTitle>
+              </WorkExperienceBackground>
+              <Space space="30px" />
+              <Boxes>
+                {workExperience.map(({ nombreDeLaEmpresa, cargo, descripcion }, i) => {
+                  return (
+                    <Box key={`${nombreDeLaEmpresa}-${i}`}>
+                      <ExtraSubtitle>{cargo}</ExtraSubtitle>
+                      <Space space="12px" />
+                      <MainParagraph fontWeight="600">{nombreDeLaEmpresa}</MainParagraph>
+                      <Space space="10px" />
+                      <Paragraphs textAlign="justify">{descripcion.descripcion}</Paragraphs>
+                    </Box>
+                  );
+                })}
+              </Boxes>
+              <Space space="30px" />
               <ExtraSubtitle color="greenDark" fontWeight="600">
                 Referencias
               </ExtraSubtitle>
