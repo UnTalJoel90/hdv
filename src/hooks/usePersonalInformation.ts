@@ -35,7 +35,7 @@ export const usePersonalInformation = (): PersonalInformationProps => {
           link
         }
       }
-      allContentfulExperienciaLaboral(sort: { order: ASC, fields: ordenar }) {
+      allContentfulExperienciaLaboral(sort: { order: DESC, fields: ordenar }) {
         nodes {
           nombreDeLaEmpresa
           cargo
