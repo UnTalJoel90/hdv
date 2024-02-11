@@ -152,7 +152,7 @@ const IndexPage: FC = () => {
                 <SubTitle color="greenDark">EXPERIENCIA LABORAL</SubTitle>
               </WorkExperienceBackground>
               <Space space="30px" />
-              <Boxes>
+              <Boxes gap="30px 0" direction="column">
                 {workExperience.map(({ nombreDeLaEmpresa, cargo, descripcion }, i) => {
                   return (
                     <Box key={`${nombreDeLaEmpresa}-${i}`}>
@@ -165,7 +165,7 @@ const IndexPage: FC = () => {
                   );
                 })}
               </Boxes>
-              <Space space="30px" />
+              <Space space="50px" />
               <ExtraSubtitle color="greenDark" fontWeight="600">
                 Referencias
               </ExtraSubtitle>
