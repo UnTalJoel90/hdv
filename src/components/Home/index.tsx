@@ -57,6 +57,8 @@ export const ContactData = styled.div`
 
     ${breakpoints.md} {
       width: auto;
+      padding-right: 10px;
+      padding-left: 10px;
     }
   `}
 `;
