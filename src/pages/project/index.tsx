@@ -31,26 +31,26 @@ const ProjectTemplates: FC<ProjectTemplatesProps> = ({ data }) => {
         <Space space="10px" />
         <AlertBox>
           <MainParagraph>
-            <b>IMPORTANTE:</b> Expo IOS no permite la lectura de QRS sin autorizacion (EXNetwork
-            error 403), por este motivo el siguiente codigo solo puede ser usado en dispositivos
-            Android.
+            <b>IMPORTANT:</b> Expo IOS does not allow QR code reading without authorization
+            (EXNetwork error 403), for this reason the following code can only be used on Android
+            devices.
           </MainParagraph>
         </AlertBox>
         <Space space="20px" />
         <Image src={cdigoQr.url} alt="qr" />
         <Space space="20px" />
-        <SubTitle>Simuladores - Gifs de Ejemplo</SubTitle>
+        <SubTitle>Simulators - Examples</SubTitle>
         <Space space="10px" />
         <ContainerVideos>
           <div>
-            <ExtraSubtitle>IOs</ExtraSubtitle>
+            <ExtraSubtitle>iOS</ExtraSubtitle>
             <Space space="5px" />
-            <Image height="500px" width='auto' src={videoIOs.url} alt="videoIOs" />
+            <Image height="500px" width="auto" src={videoIOs.url} alt="videoIOs" />
           </div>
           <div>
             <ExtraSubtitle>Android</ExtraSubtitle>
             <Space space="5px" />
-            <Image height="500px" width='auto' src={videoAndroid.url} alt="videoAndroid" />
+            <Image height="500px" width="auto" src={videoAndroid.url} alt="videoAndroid" />
           </div>
         </ContainerVideos>
         <Space space="50px" />

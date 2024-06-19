@@ -42,7 +42,7 @@ const IndexPage: FC = () => {
     nombre,
     cargo,
     habilidades,
-    idiomas,
+    // idiomas,
     resumen,
     otrosConocimientos,
     contactInformation,
@@ -86,7 +86,7 @@ const IndexPage: FC = () => {
                 </ContainerPicture>
                 <Space space="24px" />
                 <ContactData>
-                  <MainParagraph color="white">DATOS DE CONTACTO</MainParagraph>
+                  <MainParagraph color="white">CONTACT INFORMATION</MainParagraph>
                   <Space space="17px" />
                   {contactInformation.map(({ link }, i) => {
                     if (link.includes('@') && !saveEmail) setSaveEmail(link);
@@ -100,7 +100,7 @@ const IndexPage: FC = () => {
                   <Space space="10px" />
                   <CelBotton onClick={() => setModal(true)}>
                     <SmallText color="white" textAlign="justify">
-                      Numero de contacto
+                      Contact number
                     </SmallText>
                   </CelBotton>
                 </ContactData>
@@ -110,18 +110,18 @@ const IndexPage: FC = () => {
             <Space space="40px" />
             <WorkExperienceContainer>
               <ExtraSubtitle color="greenDark" fontWeight="600">
-                CONOCIMIENTOS
+                KNOWLEDGE
               </ExtraSubtitle>
               <Space space="12px" />
               <MainParagraph textAlign="justify">{otrosConocimientos}</MainParagraph>
               <Space space="40px" />
               <ExtraSubtitle color="greenDark" fontWeight="600">
-                HABILIDADES | IDIOMAS
+                SKILLS
               </ExtraSubtitle>
               <Space space="12px" />
               <Boxes>
                 <Box>
-                  <MainParagraph fontWeight="600">Habilidades</MainParagraph>
+                  {/* <MainParagraph fontWeight="600">Habilidades</MainParagraph> */}
                   <Space space="10px" />
                   <ul>
                     {habilidades.map((h, i) => {
@@ -133,7 +133,7 @@ const IndexPage: FC = () => {
                     })}
                   </ul>
                 </Box>
-                <Box>
+                {/* <Box>
                   <MainParagraph fontWeight="600">Idiomas</MainParagraph>
                   <Space space="17px" />
                   <ul>
@@ -145,11 +145,11 @@ const IndexPage: FC = () => {
                       );
                     })}
                   </ul>
-                </Box>
+                </Box> */}
               </Boxes>
               <Space space="40px" />
               <WorkExperienceBackground>
-                <SubTitle color="greenDark">EXPERIENCIA LABORAL</SubTitle>
+                <SubTitle color="greenDark">WORK EXPERIENCE</SubTitle>
               </WorkExperienceBackground>
               <Space space="30px" />
               <Boxes gap="30px 0" direction="column">
@@ -167,7 +167,7 @@ const IndexPage: FC = () => {
               </Boxes>
               <Space space="50px" />
               <ExtraSubtitle color="greenDark" fontWeight="600">
-                Referencias
+                References
               </ExtraSubtitle>
               <Space space="12px" />
               <Boxes gap="20px 0">
@@ -175,22 +175,22 @@ const IndexPage: FC = () => {
                   return (
                     <Box key={`${nombreDeLaPersona}-${i}`}>
                       <Paragraphs>
-                        <strong>Nombre de la persona:</strong> {nombreDeLaPersona}
+                        <strong>Name:</strong> {nombreDeLaPersona}
                       </Paragraphs>
                       <Space space="10px" />
                       <Paragraphs>
-                        <strong>Empresa:</strong> {empresa}
+                        <strong>Company:</strong> {empresa}
                       </Paragraphs>
                       <Space space="10px" />
                       <Paragraphs>
-                        <strong>Cargo:</strong> {cargo}
+                        <strong>Position:</strong> {cargo}
                       </Paragraphs>
                       <Space space="10px" />
                       <RefBottonContainer>
-                        <strong>Celular:</strong>
+                        <strong>Cell phone:</strong>
                         <CelBotton color="black" width="max-content" onClick={() => setModal(true)}>
                           <SmallText color="black" textAlign="justify">
-                            Numero de contacto
+                            Contact number
                           </SmallText>
                         </CelBotton>
                       </RefBottonContainer>
@@ -215,7 +215,7 @@ const IndexPage: FC = () => {
               x
             </CloseBotton>
             <MainParagraph textAlign="center" color="white" fontWeight="600">
-              Para mayor informacion por favor escribeme al correo: {saveEmail}
+              For more information please write to me by email: {saveEmail}
             </MainParagraph>
           </ModalHome>
         </Modal>
