@@ -6,13 +6,13 @@ require('dotenv').config({
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: 'Hoja de vida',
+    title: 'CV',
     description: '',
     author: 'Joel Elicer Robinson Alvarez',
-    siteUrl: 'https://joelrobinson.co',
+    // siteUrl: 'https://joelrobinson.co',
     menuLinks: [
       {
-        name: 'Inicio',
+        name: 'Home',
         link: '/',
       },
       // {
@@ -20,8 +20,8 @@ const config: GatsbyConfig = {
       //   link: '/blog',
       // },
       {
-        name: 'Proyecto',
-        link: '/project',
+        name: 'Project(s)',
+        link: '/projects',
         extraMenu: true,
       },
     ],
